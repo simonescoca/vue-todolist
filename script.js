@@ -28,26 +28,49 @@ createApp ({
         return{
             ToDoList: [{
                 text: "Comprare il latte",
-                isDone: false},
+                isDone: false
+            },
     
                 {text: "Ballare la samba",
-                isDone: false},
+                isDone: false
+            },
     
                 {text: "Ranked su COD",
-                isDone: true},
+                isDone: true
+            },
     
                 {text: "Tirare santi sui codici",
-                isDone: true},
+                isDone: true
+            },
     
                 {text: "Dormire",
                 isDone: false
-            }]
+            }],
+
+            newTask: {
+                text: "",
+                isDone: false,
+            }
         }
     },
 
     methods: {
         removeTask (whichTask) {
-            this.ToDoList.splice(whichTask, 1)
+            this.ToDoList.splice (whichTask, 1)
+        },
+
+        oppositeValue (whichTask) {
+            if (this.ToDoList[whichTask].isDone) {
+                this.ToDoList[whichTask].isDone = false
+            } else {
+                this.ToDoList[whichTask].isDone = true
+            }
+        },
+
+        addNewTask () {
+            if (this.newTask.text !== ""){
+                this.ToDoList.push (this.newTask)
+            }
         }
     }
 }).mount ("#app")
