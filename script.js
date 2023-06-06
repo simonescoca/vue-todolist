@@ -46,6 +46,8 @@ createApp ({
     },
 
     methods: {
-
+        removeTask (whichTask) {
+            this.ToDoList.splice(whichTask, 1)
+        }
     }
 }).mount ("#app")
