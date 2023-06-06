@@ -21,14 +21,19 @@
                         ToDo List
                     </header>
                     <ul class="d-flex flex-column list-unstyled my_list">
-                        <li class="my_task" v-for="(singleTask, index) in ToDoList">
-                            <span v-if="singleTask.isDone">
-                                <i class="fa-solid fa-check"></i>
-                            </span>
-                            <span v-if="!singleTask.isDone">
-                                <i class="fa-solid fa-x"></i>
-                            </span>
-                            {{singleTask.text}}
+                        <li class="my_task d-flex justify-content-between align-items-center" v-for="(singleTask, index) in ToDoList">
+                            <div>
+                                <span v-if="singleTask.isDone" class="text-success">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span v-if="!singleTask.isDone" class="text-danger">
+                                    <i class="fa-solid fa-x"></i>
+                                </span>
+                                {{singleTask.text}}
+                            </div>
+                            <button type="button" class="btn btn-outline-danger d-flex" @click="removeTask(index)">
+                                <i class="fa-solid fa-trash m-auto"></i>
+                            </button>
                         </li>
                     </ul>
                 </section>
