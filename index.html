@@ -15,7 +15,24 @@
         </script>
         <div id="app">
         <!-- <VueJS APP> -->
-            
+            <main class="container d-flex">
+                <section class="m-auto my_todo-container">
+                    <header class="text-center my_title">
+                        ToDo List
+                    </header>
+                    <ul class="d-flex flex-column list-unstyled my_list">
+                        <li class="my_task" v-for="(singleTask, index) in ToDoList">
+                            <span v-if="singleTask.isDone">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span v-if="!singleTask.isDone">
+                                <i class="fa-solid fa-x"></i>
+                            </span>
+                            {{singleTask.text}}
+                        </li>
+                    </ul>
+                </section>
+            </main>
         <!-- </VueJS APP> -->
         </div>
         <script src="script.js">
