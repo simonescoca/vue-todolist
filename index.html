@@ -17,11 +17,17 @@
         <!-- <VueJS APP> -->
             <main class="container d-flex">
                 <section class="m-auto my_todo-container">
-                    <header class="text-center my_title">
-                        ToDo List
+                    <header class="text-center my_header">
+                        <h1>ToDo List</h1>
+                        <section class="d-flex justify-content-center my_inputs">
+                            <input type="text" name="task" id="add-a-task" v-model="newTask.text">
+                            <button type="button" class="btn btn-outline-primary" @click="addNewTask">
+                                Add Task
+                            </button>
+                        </section>
                     </header>
                     <ul class="d-flex flex-column list-unstyled my_list">
-                        <li class="my_task d-flex justify-content-between align-items-center" v-for="(singleTask, index) in ToDoList">
+                        <li class="my_task d-flex justify-content-between align-items-center" v-for="(singleTask, index) in ToDoList" @click="oppositeValue(index)">
                             <div>
                                 <span v-if="singleTask.isDone" class="text-success">
                                     <i class="fa-solid fa-check"></i>
