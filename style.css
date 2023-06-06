@@ -2,10 +2,15 @@
     width: 70%;
 }
 
-.my_title{
-    padding: 2rem 4rem;
+.my_header{
+    padding: 2rem 4rem 3rem;
     font-size: 1.3rem;
     font-weight: 700;
+}
+
+.my_inputs{
+    padding-top: 1.5rem;
+    gap: 1rem;
 }
 
 .my_list{
