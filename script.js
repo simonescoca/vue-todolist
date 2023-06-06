@@ -46,11 +46,6 @@ createApp ({
                 {text: "Dormire",
                 isDone: false
             }],
-
-            newTask: {
-                text: "",
-                isDone: false,
-            }
         }
     },
 
@@ -67,11 +62,11 @@ createApp ({
             }
         },
 
-        addNewTask () {
+        addNewTask (userNewTask) {
             if (this.newTask.text !== ""){
-                this.ToDoList.push (this.newTask)
+                this.ToDoList.push ({text: userNewTask, isDone: false })
             }
-            this.newTask.text = ""
+            this.newTask = ""
         }
     }
 }).mount ("#app")

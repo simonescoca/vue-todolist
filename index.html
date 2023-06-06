@@ -20,8 +20,8 @@
                     <header class="text-center my_header">
                         <h1>ToDo List</h1>
                         <section class="d-flex justify-content-center my_inputs">
-                            <input type="text" name="task" id="add-a-task" v-model="newTask.text" @keydown.enter="addNewTask">
-                            <button type="button" class="btn btn-outline-primary" @click="addNewTask">
+                            <input type="text" name="task" id="add-a-task" v-model="newTask" @keydown.enter="addNewTask(newTask)">
+                            <button type="button" class="btn btn-outline-primary" @click="addNewTask(newTask)">
                                 Add Task
                             </button>
                         </section>
