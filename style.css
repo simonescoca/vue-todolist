@@ -1,0 +1,22 @@
+.my_todo-container{
+    width: 70%;
+}
+
+.my_title{
+    padding: 2rem 4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.my_list{
+    gap: 15px;
+}
+
+.my_task{
+    border: 1px solid black;
+    padding: 1rem 2rem;
+}
+
+.my_task i{
+    margin-right: 1rem;
+}
