@@ -71,6 +71,7 @@ createApp ({
             if (this.newTask.text !== ""){
                 this.ToDoList.push (this.newTask)
             }
+            this.newTask.text = ""
         }
     }
 }).mount ("#app")
