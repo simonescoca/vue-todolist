@@ -21,3 +21,31 @@
 
 //     2. cliccando sul testo dell'item,
 //     invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
+
+const {createApp} = Vue
+createApp ({
+    data () {
+        return{
+            ToDoList: [{
+                text: "Comprare il latte",
+                isDone: false},
+    
+                {text: "Ballare la samba",
+                isDone: false},
+    
+                {text: "Ranked su COD",
+                isDone: true},
+    
+                {text: "Tirare santi sui codici",
+                isDone: true},
+    
+                {text: "Dormire",
+                isDone: false
+            }]
+        }
+    },
+
+    methods: {
+
+    }
+}).mount ("#app")
