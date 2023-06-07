@@ -37,7 +37,7 @@
                                 </span>
                                 {{singleTask.text}}
                             </div>
-                            <button type="button" class="btn btn-outline-danger d-flex" @click="removeTask(index)">
+                            <button type="button" class="btn btn-outline-danger d-flex" @click.stop="removeTask(index)">
                                 <i class="fa-solid fa-trash m-auto"></i>
                             </button>
                         </li>
